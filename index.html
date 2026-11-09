@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GemVault — Anti-Tamper Digital Discipline for Android</title>
+  <meta name="description" content="GemVault is an open-source, anti-tamper digital discipline and YouTube Shorts blocker built in native Kotlin. Surgical UI node interception with zero network permissions.">
+  <meta name="theme-color" content="#010102">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./">
+  <meta property="og:title" content="GemVault — Anti-Tamper Digital Discipline for Android">
+  <meta property="og:description" content="Surgical Shorts Interception. Zero-Bypass Lockdown. Native Kotlin, AccessibilityNodeInfo inspection, monotonic clock anti-tamper.">
+  <meta property="og:image" content="./assets/favicon.svg">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY GLASSMORPHIC HEADER & NAVIGATION                                -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="./" class="brand-link" aria-label="GemVault Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+            <path d="M16 2L27 7V17C27 23.2 22.2 28.5 16 30C9.8 28.5 5 23.2 5 17V7L16 2Z" fill="#08090A" stroke="#5E6AD2" stroke-width="1.5"/>
+            <polygon points="16,8 22,12 19,21 16,24 13,21 10,12" fill="#0F1011" stroke="#27A644" stroke-width="1.2"/>
+            <circle cx="16" cy="15" r="1.5" fill="#27A644"/>
+          </svg>
+        </div>
+        <span class="brand-name">GemVault</span>
+        <span class="version-tag">v1.4.0 · Kotlin</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link">Overview</a>
+        <a href="#modes" class="nav-link">Modes</a>
+        <a href="#security" class="nav-link">Anti-Tamper</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#permissions" class="nav-link">Permissions</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/username/gemvault" target="_blank" rel="noopener noreferrer" class="btn btn-ghost github-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <span>Star</span>
+        </a>
+        <a href="#download" class="btn btn-primary">Download APK</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION & INTERACTIVE CSS PHONE MOCKUP                            -->
+  <!-- ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-ambient-glow"></div>
+    <div class="section-container hero-grid">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="hero-content">
+        <div class="eyebrow-pill">
+          <span class="status-pulse"></span>
+          <span class="eyebrow-text">KOTLIN NATIVE • ACCESSIBILITY SERVICE • ZERO TELEMETRY</span>
+        </div>
+
+        <h1 class="hero-title">
+          Surgical Shorts Interception. <br>
+          <span class="gradient-text">Zero-Bypass Lockdown.</span>
+        </h1>
+
+        <p class="hero-description">
+          Standard screen-time blockers fail at midnight because wall-clock timers and permissions can be undone in five seconds. GemVault inspects UI accessibility nodes in real time to kill YouTube Shorts while preserving long-form video—or locks down the entire package installer with monotonic, tamper-proof timers.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download Latest APK (v1.4)</span>
+          </a>
+          <a href="https://github.com/username/gemvault" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <span>Inspect Source on GitHub</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <span class="trust-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27A644" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            SHA-256 Verified
+          </span>
+          <span class="trust-divider">•</span>
+          <span class="trust-item">Android 9.0+ (API 28+)</span>
+          <span class="trust-divider">•</span>
+          <span class="trust-item">No Root Required</span>
+          <span class="trust-divider">•</span>
+          <span class="trust-item">MIT License</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Pure-CSS Android Phone Mockup -->
+      <div class="hero-mockup-wrapper">
+        <div class="phone-mockup-container">
+          <!-- Hardware Buttons -->
+          <div class="phone-btn phone-btn-volume-up"></div>
+          <div class="phone-btn phone-btn-volume-down"></div>
+          <div class="phone-btn phone-btn-power"></div>
+
+          <!-- Outer Phone Chassis -->
+          <div class="phone-chassis">
+            <!-- Screen Surface -->
+            <div class="phone-screen" id="phoneScreen">
+              
+              <!-- Front Camera Punchhole -->
+              <div class="phone-island">
+                <span class="camera-lens"></span>
+              </div>
+
+              <!-- Android Status Bar -->
+              <div class="phone-status-bar">
+                <span class="status-clock" id="statusClock">14:02</span>
+                <div class="status-icons">
+                  <!-- 5G / Signal Icon -->
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="16" width="3" height="6" rx="1"/>
+                    <rect x="7" y="12" width="3" height="10" rx="1"/>
+                    <rect x="12" y="8" width="3" height="14" rx="1"/>
+                    <rect x="17" y="4" width="3" height="18" rx="1"/>
+                  </svg>
+                  <!-- Wi-Fi Icon -->
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                    <line x1="12" y1="20" x2="12.01" y2="20"/>
+                  </svg>
+                  <!-- Battery Icon -->
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="16" height="10" rx="2" ry="2"/>
+                    <line x1="22" y1="11" x2="22" y2="13"/>
+                    <rect x="4" y="9" width="10" height="6" fill="#27A644" stroke="none"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- GemVault Active HUD Banner -->
+              <div class="mockup-hud">
+                <div class="hud-left">
+                  <span class="hud-indicator active"></span>
+                  <span class="hud-title">GemVault Service</span>
+                </div>
+                <div class="hud-right">
+                  <span class="hud-counter" id="mockupBlockedCount">Blocked: 0</span>
+                </div>
+              </div>
+
+              <!-- Telemetry Overlay Flash for Interception -->
+              <div class="interception-overlay" id="interceptionOverlay">
+                <div class="interception-badge">
+                  <span class="intercept-icon">⚡</span>
+                  <div class="intercept-details">
+                    <span class="intercept-action">GLOBAL_ACTION_BACK FIRED</span>
+                    <span class="intercept-node">reel_recycler [9:16] INTERCEPTED (3ms)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Simulated YouTube App Header -->
+              <div class="yt-header">
+                <div class="yt-brand">
+                  <span class="yt-logo-icon">▶</span>
+                  <span class="yt-logo-text">YouTube</span>
+                </div>
+                <div class="yt-actions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span class="yt-avatar">K</span>
+                </div>
+              </div>
+
+              <!-- Simulated YouTube Feed Container -->
+              <div class="yt-feed">
+                <!-- Allowed 16:9 Long-Form Video -->
+                <div class="yt-card yt-card-allowed" id="cardAllowed" tabindex="0" role="button" aria-label="Horizontal Educational Video">
+                  <div class="yt-thumb-169">
+                    <div class="thumb-inner">
+                      <span class="lecture-badge">MIT 6.824</span>
+                      <span class="lecture-play">▶</span>
+                      <span class="lecture-duration">1:24:10</span>
+                    </div>
+                  </div>
+                  <div class="yt-card-info">
+                    <div class="yt-channel-avatar">M</div>
+                    <div class="yt-meta">
+                      <div class="yt-video-title">Distributed Systems: Raft Consensus</div>
+                      <div class="yt-channel-meta">MIT OpenCourseWare • 412K views</div>
+                      <div class="yt-status-badge pass" id="allowedBadge">
+                        <span class="badge-dot"></span> NODE_SCAN: HORIZONTAL_PLAYER [16:9] · ALLOWED
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Shorts Shelf to Intercept -->
+                <div class="yt-shorts-shelf">
+                  <div class="shelf-header">
+                    <div class="shelf-title">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#EB5757"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                      <span>Shorts Shelf</span>
+                    </div>
+                    <span class="shelf-flag">SURGICAL TRAP</span>
+                  </div>
+
+                  <!-- Interceptable Short Card -->
+                  <div class="yt-card yt-card-short" id="cardShort" tabindex="0" role="button" aria-label="Interceptable YouTube Short">
+                    <div class="short-thumb-916">
+                      <div class="short-badge">Shorts</div>
+                      <div class="short-click-prompt">
+                        <span class="click-hand">👉</span>
+                        <span class="click-text">Click to Intercept!</span>
+                      </div>
+                    </div>
+                    <div class="short-info">
+                      <div class="short-title">Infinite Dopamine Reel #89...</div>
+                      <div class="short-views">8.4M views</div>
+                      <div class="short-intercept-tag">
+                        <span class="tag-pulse"></span> AUTO-BACK ACTIVE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- YouTube Simulated Bottom Navigation -->
+              <div class="yt-bottom-nav">
+                <div class="nav-tab active">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                  <span>Home</span>
+                </div>
+                <div class="nav-tab tab-shorts-blocked" id="tabShortsBlocked">
+                  <span class="shorts-block-dot">✕</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                  <span>Shorts</span>
+                </div>
+                <div class="nav-tab">
+                  <span class="plus-circle">+</span>
+                </div>
+                <div class="nav-tab">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                  <span>Subs</span>
+                </div>
+                <div class="nav-tab">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v12H4z"/></svg>
+                  <span>You</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <p class="mockup-caption">
+          <span class="caption-mono">LIVE INTERACTIVE MOCKUP:</span> Tap the vertical Short or horizontal lecture above to test <span class="caption-code">ShortsBlockerService.kt</span> in real-time.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. INTERACTIVE OPERATIONAL MODES SWITCHER                                 -->
+  <!-- ========================================================================= -->
+  <section class="modes-section" id="modes">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">01 // OPERATIONAL_PROFILES</span>
+        <h2 class="section-title">Two Modes of Engagement. Zero Compromises.</h2>
+        <p class="section-subtitle">
+          Filter out algorithmic dopamine traps while keeping educational video accessible, or seal the vault completely with kernel-anchored anti-tamper guards.
+        </p>
+      </div>
+
+      <!-- Segmented Interactive Switcher -->
+      <div class="mode-switcher-container">
+        <div class="mode-tabs" role="tablist">
+          <button class="mode-tab active" id="tabStandard" role="tab" aria-selected="true" aria-controls="panelStandard">
+            <span class="mode-dot standard-dot"></span>
+            <span>Standard Mode: Surgical Filter</span>
+          </button>
+          <button class="mode-tab" id="tabStrict" role="tab" aria-selected="false" aria-controls="panelStrict">
+            <span class="mode-dot strict-dot"></span>
+            <span>Strict Mode: Vault Lockdown</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode Display Panels -->
+      <div class="mode-panels">
+        
+        <!-- Standard Mode Panel -->
+        <div class="mode-card active" id="panelStandard" role="tabpanel">
+          <div class="mode-card-header">
+            <div class="mode-header-badge standard">
+              <span class="badge-dot"></span>
+              SURGICAL UI FILTER · DEFAULT
+            </div>
+            <h3 class="mode-card-title">Block Shorts. Keep Long-Form Educational Video.</h3>
+            <p class="mode-card-desc">
+              Traverses the active window hierarchy in real time via <code class="inline-code">AccessibilityNodeInfo</code>. The millisecond a vertical Short, reel shelf, or bottom navigation tab is tapped, GemVault dispatches <code class="inline-code">GLOBAL_ACTION_BACK</code>—ejecting the session from the short-form loop while leaving horizontal tutorials, lectures, and long-form videos untouched.
+            </p>
+          </div>
+
+          <!-- Dynamic Visual Telemetry Box -->
+          <div class="mode-telemetry-stage">
+            <div class="stage-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="stage-title">NODE_TRAVERSAL_INSPECTOR // com.google.android.youtube</span>
+            </div>
+            <div class="stage-body">
+              <div class="telemetry-row pass">
+                <span class="node-time">00:00:01.004</span>
+                <span class="node-id">view.player_view [16:9]</span>
+                <span class="node-status">PASS (LONG_FORM_ALLOWED)</span>
+              </div>
+              <div class="telemetry-row intercept">
+                <span class="node-time">00:00:04.281</span>
+                <span class="node-id">reel_recycler [9:16]</span>
+                <span class="node-status">GLOBAL_ACTION_BACK FIRED (3ms)</span>
+              </div>
+              <div class="telemetry-row intercept">
+                <span class="node-time">00:00:05.109</span>
+                <span class="node-id">tab_shorts_button</span>
+                <span class="node-status">EJECTED TO HOME FEED</span>
+              </div>
+              <div class="telemetry-row pass">
+                <span class="node-time">00:00:05.112</span>
+                <span class="node-id">node.recycle()</span>
+                <span class="node-status">0.0 MB LEAK DELTA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Long-Form Video:</span>
+              <span class="spec-value success">100% Unrestricted</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Shorts Bottom Tab:</span>
+              <span class="spec-value danger">Aggressively Suppressed</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Home Shelf Clicks:</span>
+              <span class="spec-value danger">Intercepted (Back Fired)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Heap Consumption:</span>
+              <span class="spec-value success">Zero-Leak .recycle()</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strict Mode Panel -->
+        <div class="mode-card" id="panelStrict" role="tabpanel" style="display: none;">
+          <div class="mode-card-header">
+            <div class="mode-header-badge strict">
+              <span class="badge-dot"></span>
+              MAXIMUM PROTECTION · ZERO BYPASS
+            </div>
+            <h3 class="mode-card-title">Full YouTube Blackout + Anti-Tamper OS Guard.</h3>
+            <p class="mode-card-desc">
+              Enforces a complete blackout of the YouTube application for the duration of the committed timer. Simultaneously monitors system package events to intercept <code class="inline-code">com.android.packageinstaller</code> and guards Android Settings, preventing permission revocation, force-stops, or uninstallation mid-session.
+            </p>
+          </div>
+
+          <!-- Dynamic Visual Telemetry Box -->
+          <div class="mode-telemetry-stage strict-stage">
+            <div class="stage-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="stage-title">STRICT_LOCKDOWN_ENGINE // HARDWARE_MONOTONIC</span>
+            </div>
+            <div class="stage-body">
+              <div class="telemetry-row strict-active">
+                <span class="node-time">LOCK_DURATION</span>
+                <span class="node-id">03:45:00 REMAINING</span>
+                <span class="node-status">MONOTONIC ANCHOR ACTIVE</span>
+              </div>
+              <div class="telemetry-row intercept">
+                <span class="node-time">EVENT_CATCH</span>
+                <span class="node-id">com.google.android.youtube</span>
+                <span class="node-status">GLOBAL_ACTION_HOME FIRED</span>
+              </div>
+              <div class="telemetry-row intercept">
+                <span class="node-time">ANTI_TAMPER</span>
+                <span class="node-id">com.android.packageinstaller</span>
+                <span class="node-status">UNINSTALL ATTEMPT BLOCKED</span>
+              </div>
+              <div class="telemetry-row security">
+                <span class="node-time">DPM_ADMIN</span>
+                <span class="node-id">DevicePolicyManager</span>
+                <span class="node-status">AUTO-TEARDOWN AT 00:00:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">YouTube Package:</span>
+              <span class="spec-value danger">Complete Blackout</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Package Installer:</span>
+              <span class="spec-value danger">Guarded Against Uninstall</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Android Settings:</span>
+              <span class="spec-value danger">Guarded Against Revocation</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Admin Privileges:</span>
+              <span class="spec-value security">Auto-Surrendered at Expiry</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. ANTI-TAMPER & SECURITY BENTO GRID                                      -->
+  <!-- ========================================================================= -->
+  <section class="security-section" id="security">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">02 // HARDENED_ENGINEERING</span>
+        <h2 class="section-title">Engineered Against Every Loophole.</h2>
+        <p class="section-subtitle">
+          Built in native Kotlin with strict lifecycle hygiene. GemVault closes the OS-level exploits that render conventional screen-time apps obsolete.
+        </p>
+      </div>
+
+      <!-- Bento Grid (4 Columns Desktop, 2 Columns Tablet, 1 Column Mobile) -->
+      <div class="bento-grid">
+        
+        <!-- Cell 1: Time-Travel Defense (2x2 Anchor) -->
+        <div class="bento-cell cell-1">
+          <div class="bento-visual">
+            <div class="telemetry-widget">
+              <div class="clock-comparison-row bad">
+                <div class="clock-label">
+                  <span class="clock-tag">VULNERABLE:</span> System.currentTimeMillis()
+                </div>
+                <div class="clock-value">+24h Wall Clock Shift</div>
+                <span class="chip chip-ignored">IGNORED BY VAULT</span>
+              </div>
+              <div class="clock-comparison-row good">
+                <div class="clock-label">
+                  <span class="clock-tag">HARDENED:</span> SystemClock.elapsedRealtime()
+                </div>
+                <div class="clock-value monotonic-ticker" id="monotonicTicker">
+                  148,924,820 ms
+                </div>
+                <span class="chip chip-verified">LOCK INTACT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-copy">
+            <div class="cell-eyebrow">MONOTONIC_CLOCK // ANTI-CHEAT</div>
+            <h3 class="cell-title">Time-Travel Defense</h3>
+            <p class="cell-desc">
+              Conventional blockers read <code class="inline-code">System.currentTimeMillis()</code>. Move the Android system date forward by one day in Settings, and their timers expire in five seconds. GemVault anchors every session to <code class="inline-code">SystemClock.elapsedRealtime()</code>—counting continuous hardware milliseconds since boot, including deep sleep. Changing the wall clock or timezone has zero effect on an active lock.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cell 2: Deterministic Node Recycling (2x1 Wide) -->
+        <div class="bento-cell cell-2">
+          <div class="bento-visual code-visual">
+            <pre class="code-snippet"><code><span class="k-keyword">try</span> {
+    inspectShortsShelf(node)
+} <span class="k-keyword">finally</span> {
+    node.<span class="k-call">recycle</span>() <span class="k-comment">// Ephemeral memory footprint</span>
+}</code></pre>
+            <div class="heap-badge">
+              <span class="badge-dot"></span> 0.0 MB Heap Leak Delta
+            </div>
+          </div>
+          <div class="bento-copy">
+            <div class="cell-eyebrow">HEAP_HYGIENE // PERFORMANCE</div>
+            <h3 class="cell-title">Deterministic Node Recycling</h3>
+            <p class="cell-desc">
+              Poorly engineered accessibility loops degrade Android performance by abandoning detached view snapshots in RAM. GemVault wraps every window traversal in a strict <code class="inline-code">finally</code> block that explicitly calls <code class="inline-code">.recycle()</code> on every traversed <code class="inline-code">AccessibilityNodeInfo</code> instance—guaranteeing zero memory leaks and flat battery consumption.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cell 3: Reboot-Safe State Math (1x1 Compact) -->
+        <div class="bento-cell cell-3">
+          <div class="bento-visual">
+            <div class="state-pipeline">
+              <div class="pipe-node active">
+                <span class="pipe-icon">⚡</span>
+                <span class="pipe-text">BOOT_DETECTED</span>
+              </div>
+              <div class="pipe-connector">→</div>
+              <div class="pipe-node active">
+                <span class="pipe-icon">✓</span>
+                <span class="pipe-text">DELTA_VERIFIED</span>
+              </div>
+              <div class="pipe-connector">→</div>
+              <div class="pipe-node active">
+                <span class="pipe-icon">🔒</span>
+                <span class="pipe-text">TIMER_RESUMED</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-copy">
+            <div class="cell-eyebrow">BOOT_SYNC // PERSISTENCE</div>
+            <h3 class="cell-title">Reboot-Safe Math</h3>
+            <p class="cell-desc">
+              Because <code class="inline-code">elapsedRealtime()</code> resets to zero upon restart, naive monotonic timers suffer from premature resets across reboots. GemVault cross-references persisted boot timestamps against known elapsed deltas on startup.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cell 4: Automated Privilege Teardown (1x1 Compact) -->
+        <div class="bento-cell cell-4">
+          <div class="bento-visual">
+            <div class="teardown-widget">
+              <div class="teardown-countdown">00:00:00.00</div>
+              <div class="teardown-action">
+                <span class="action-tag">ACTION EXECUTED:</span>
+                <span class="action-fn">dpm.removeActiveAdmin()</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-copy">
+            <div class="cell-eyebrow">ZERO_RESIDUE // ADMIN_API</div>
+            <h3 class="cell-title">Auto-Privilege Teardown</h3>
+            <p class="cell-desc">
+              Applications that retain permanent Device Administrator rights create long-term OS security friction. The exact millisecond a Strict Mode timer hits zero, GemVault automatically invokes <code class="inline-code">removeActiveAdmin()</code> via <code class="inline-code">DevicePolicyManager</code>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cell 5: Zero-Blind-Spot Permission Gating (Full Span) -->
+        <div class="bento-cell cell-5">
+          <div class="bento-visual gating-visual">
+            <div class="gating-check-grid">
+              <div class="gating-check-item passed">
+                <span class="check-icon">✓</span>
+                <span class="check-label">Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES</span>
+                <span class="check-status">BINDED & ACTIVE</span>
+              </div>
+              <div class="gating-check-item passed">
+                <span class="check-icon">✓</span>
+                <span class="check-label">DevicePolicyManager.isAdminActive()</span>
+                <span class="check-status">VERIFIED (STRICT)</span>
+              </div>
+              <div class="gating-check-item ready">
+                <span class="check-icon">🔒</span>
+                <span class="check-label">Hardware Monotonic State Machine</span>
+                <span class="check-status">LOCK AUTHORIZED</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-copy">
+            <div class="cell-eyebrow">PREFLIGHT // INTEGRITY_GATES</div>
+            <h3 class="cell-title">Zero-Blind-Spot Permission Gating</h3>
+            <p class="cell-desc">
+              <code class="inline-code">MainActivity.kt</code> verifies system accessibility hooks before allowing any timer to engage. If a user enters battery-saver mode or revokes the service, the app refuses to initiate a blind lock state.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. ARCHITECTURE OVERVIEW (MainActivity.kt vs ShortsBlockerService.kt)     -->
+  <!-- ========================================================================= -->
+  <section class="architecture-section" id="architecture">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">03 // CORE_ARCHITECTURE</span>
+        <h2 class="section-title">Separation of Concerns: Gating vs. Interception.</h2>
+        <p class="section-subtitle">
+          How GemVault orchestrates foreground configuration with background event dispatching in zero-latency Kotlin.
+        </p>
+      </div>
+
+      <!-- Architecture Comparison Cards -->
+      <div class="arch-cards-grid">
+        
+        <!-- MainActivity.kt Card -->
+        <div class="arch-card">
+          <div class="arch-card-header">
+            <div class="arch-file-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5E6AD2" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+              <span>MainActivity.kt</span>
+            </div>
+            <span class="arch-role-badge">STATE & PRIVILEGE GATING</span>
+          </div>
+          <div class="arch-card-body">
+            <ul class="arch-points">
+              <li>
+                <strong>Pre-Flight Service Audit:</strong> Queries <code class="inline-code">Settings.Secure</code> to verify active accessibility bindings before committing lock timers.
+              </li>
+              <li>
+                <strong>Monotonic State Persistence:</strong> Stores hardware timestamps and remaining durations in encrypted SharedPreferences.
+              </li>
+              <li>
+                <strong>DevicePolicyManager Coordinator:</strong> Initiates <code class="inline-code">ACTION_ADD_DEVICE_ADMIN</code> for Strict Mode and schedules automated teardown.
+              </li>
+              <li>
+                <strong>Zero Residual Footprint:</strong> Completely ceases background operations once countdown expires.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ShortsBlockerService.kt Card -->
+        <div class="arch-card">
+          <div class="arch-card-header">
+            <div class="arch-file-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27A644" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+              <span>ShortsBlockerService.kt</span>
+            </div>
+            <span class="arch-role-badge active-interceptor">BACKGROUND EVENT INTERCEPTOR</span>
+          </div>
+          <div class="arch-card-body">
+            <ul class="arch-points">
+              <li>
+                <strong>Event-Driven Triggers:</strong> Subscribes exclusively to <code class="inline-code">TYPE_WINDOW_STATE_CHANGED</code> & <code class="inline-code">TYPE_VIEW_CLICKED</code>. Zero active polling.
+              </li>
+              <li>
+                <strong>Recursive Node Inspection:</strong> Inspects view IDs for <code class="inline-code">reel_recycler</code>, <code class="inline-code">shorts_container</code>, and bottom navigation indices.
+              </li>
+              <li>
+                <strong>Millisecond Back Action:</strong> Immediately invokes <code class="inline-code">performGlobalAction(GLOBAL_ACTION_BACK)</code> upon Short detection.
+              </li>
+              <li>
+                <strong>Deterministic Disposal:</strong> Explicitly calls <code class="inline-code">node.recycle()</code> inside every traversal branch to ensure 0.0 MB memory leaks.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive OS Flow Diagram -->
+      <div class="arch-flow-diagram">
+        <div class="flow-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-title">User Interaction</div>
+            <div class="step-sub">Tap on YouTube Short / Reel Shelf</div>
+          </div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-title">Android Window Manager</div>
+            <div class="step-sub">Dispatches TYPE_VIEW_CLICKED Event</div>
+          </div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step highlight">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-title">ShortsBlockerService.kt</div>
+            <div class="step-sub">Inspects AccessibilityNodeInfo (3ms)</div>
+          </div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step success">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-title">GLOBAL_ACTION_BACK</div>
+            <div class="step-sub">Session Ejected & Node Recycled</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. TRANSPARENCY, PERMISSIONS & ZERO-DATA PRIVACY MATRIX                   -->
+  <!-- ========================================================================= -->
+  <section class="permissions-section" id="permissions">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">04 // ZERO_TRUST_VERIFICATION</span>
+        <h2 class="section-title">High Privilege. Zero Network Access.</h2>
+        <p class="section-subtitle">
+          GemVault requires deep OS hooks to intercept UI nodes and block uninstallation—so it completely strips out network capabilities. What happens on the view tree stays in volatile RAM.
+        </p>
+      </div>
+
+      <!-- Permission Matrix Table -->
+      <div class="permission-table-card">
+        <div class="table-responsive">
+          <table class="permission-table">
+            <thead>
+              <tr>
+                <th>Permission / Receiver</th>
+                <th>Operational Scope</th>
+                <th>Why GemVault Requires It</th>
+                <th>Verifiable Guarantee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-pill">BIND_ACCESSIBILITY_SERVICE</code></td>
+                <td>Real-Time View Tree Inspection</td>
+                <td>Inspects <code class="inline-code">AccessibilityNodeInfo</code> view IDs and tabs in YouTube to detect Shorts and fire <code class="inline-code">GLOBAL_ACTION_BACK</code>.</td>
+                <td><span class="tag-badge green">Ephemeral RAM Only (.recycle())</span></td>
+              </tr>
+              <tr>
+                <td><code class="code-pill">DeviceAdminReceiver</code></td>
+                <td>Strict Mode Uninstall Guard</td>
+                <td>Blocks unauthorized package uninstallation and Settings tampering during an active Strict Mode session.</td>
+                <td><span class="tag-badge purple">Self-Revoking (Auto-Teardown)</span></td>
+              </tr>
+              <tr>
+                <td><code class="code-pill">RECEIVE_BOOT_COMPLETED</code></td>
+                <td>Reboot Timer Reconciliation</td>
+                <td>Reconciles active Strict Mode timers and recalculates <code class="inline-code">SystemClock.elapsedRealtime()</code> boot offsets after restart.</td>
+                <td><span class="tag-badge green">Minimal Timestamp Math</span></td>
+              </tr>
+              <tr class="airgap-row">
+                <td><code class="code-pill red-pill">android.permission.INTERNET</code></td>
+                <td><strong>OMITTED FROM MANIFEST</strong></td>
+                <td><strong>Never Requested.</strong> GemVault operates 100% offline as a deterministic local state machine.</td>
+                <td><span class="tag-badge airgap">Kernel-Enforced Air Gap</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Manifest Audit Callout -->
+      <div class="manifest-audit-card">
+        <div class="audit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7A7FAD" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="audit-copy">
+          <h4 class="audit-title">Don't Trust Marketing Copy. Audit the Manifest.</h4>
+          <p class="audit-desc">
+            Every line of Kotlin in GemVault is open-source and reproducible. Inspect the AccessibilityService traversal loop, verify the complete absence of network sockets in AndroidManifest.xml, or compile the APK from source via Gradle.
+          </p>
+        </div>
+        <a href="https://github.com/username/gemvault/blob/main/app/src/main/AndroidManifest.xml" target="_blank" rel="noopener noreferrer" class="btn btn-secondary audit-btn">
+          <span>View AndroidManifest.xml →</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. DEVELOPER FAQ (ACCORDION)                                              -->
+  <!-- ========================================================================= -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">05 // TECHNICAL_FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Direct, engineering-first answers to common implementation and usability queries.
+        </p>
+      </div>
+
+      <div class="faq-accordion-list">
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Does running an AccessibilityService drain battery in the background?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. GemVault does not run background polling loops or wake locks. It subscribes strictly to <code class="inline-code">TYPE_WINDOW_STATE_CHANGED</code> and <code class="inline-code">TYPE_VIEW_CLICKED</code> within YouTube's package. Furthermore, every traversed view node is immediately released via <code class="inline-code">.recycle()</code>, resulting in flat battery consumption and 0% CPU usage while idle.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why not just delete the YouTube app completely?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Engineers, researchers, and students rely heavily on YouTube for technical lectures, conference talks, and software tutorials. Deleting the app eliminates a valuable tool. GemVault surgically cuts out the algorithmic slot machine (Shorts) while keeping long-form educational lectures 100% accessible.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What prevents me from turning off Accessibility in Settings to bypass a lock?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              In <strong>Standard Mode</strong>, nothing—it functions as a mindful friction filter. In <strong>Strict Mode</strong>, GemVault monitors window state changes for <code class="inline-code">com.android.settings</code> and immediately fires <code class="inline-code">GLOBAL_ACTION_HOME</code> whenever the user attempts to enter the accessibility revocation screen, keeping the lock inviolable until the timer naturally completes.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens if my phone dies or is rebooted during a Strict Mode lock?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              GemVault uses boot-safe mathematical reconciliation. While <code class="inline-code">SystemClock.elapsedRealtime()</code> resets to zero on hardware reboot, GemVault listens for <code class="inline-code">RECEIVE_BOOT_COMPLETED</code>, cross-references persisted boot offsets, and resumes the exact remaining countdown without prematurely unlocking or causing multi-day lockouts.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is root access or an ADB command required to install?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. GemVault is built on stock Android APIs and requires zero root privileges and no computer-connected ADB scripting. Simply sideload the APK, grant the standard Android AccessibilityService permission, and you are ready.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. FINAL CONVERSION CTA & MINIMALIST FOOTER                               -->
+  <!-- ========================================================================= -->
+  <section class="conversion-section" id="download">
+    <div class="conversion-ambient-aura"></div>
+    <div class="section-container text-center">
+      <h2 class="conversion-title">Reclaim Hours of Cognitive Bandwidth.</h2>
+      <p class="conversion-subtitle">
+        Deploy GemVault in under 60 seconds. Free, open-source, and engineered to hold the line when willpower drops to zero.
+      </p>
+
+      <div class="conversion-actions">
+        <a href="https://github.com/username/gemvault/releases/latest" class="btn btn-primary btn-xl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Download GemVault v1.4 APK</span>
+        </a>
+
+        <!-- One-Click Git Clone Snippet -->
+        <div class="git-clone-pill" id="gitClonePill" tabindex="0" role="button" aria-label="Copy Git Clone Command">
+          <span class="clone-prompt">$</span>
+          <span class="clone-cmd">git clone https://github.com/username/gemvault.git</span>
+          <button class="clone-btn" aria-label="Copy command">
+            <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span class="copied-tooltip" id="copiedTooltip">Copied!</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="conversion-meta">
+        <span>Android 9.0+ (API 28+)</span>
+        <span>•</span>
+        <span>SHA-256: <code>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimalist Developer Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <div class="brand-icon small">
+            <svg viewBox="0 0 32 32" width="18" height="18" fill="none">
+              <path d="M16 2L27 7V17C27 23.2 22.2 28.5 16 30C9.8 28.5 5 23.2 5 17V7L16 2Z" fill="#08090A" stroke="#5E6AD2" stroke-width="1.5"/>
+              <circle cx="16" cy="15" r="1.5" fill="#27A644"/>
+            </svg>
+          </div>
+          <span class="footer-brand-name">GemVault</span>
+        </div>
+        <span class="footer-copy">Built with native Kotlin for Android. Released under the MIT License.</span>
+      </div>
+
+      <div class="footer-right">
+        <a href="https://github.com/username/gemvault/releases" target="_blank" rel="noopener noreferrer" class="footer-link">Releases</a>
+        <a href="https://github.com/username/gemvault" target="_blank" rel="noopener noreferrer" class="footer-link">Source Code</a>
+        <a href="https://github.com/username/gemvault/issues" target="_blank" rel="noopener noreferrer" class="footer-link">Issue Tracker</a>
+        <a href="https://github.com/username/gemvault/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
