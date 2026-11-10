@@ -44,6 +44,7 @@
 
       <nav class="nav-menu" id="navMenu">
         <a href="#hero" class="nav-link">Overview</a>
+        <a href="#preview" class="nav-link">Screenshots</a>
         <a href="#modes" class="nav-link">Modes</a>
         <a href="#security" class="nav-link">Anti-Tamper</a>
         <a href="#architecture" class="nav-link">Architecture</a>
@@ -52,13 +53,13 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault" target="_blank" rel="noopener noreferrer" class="btn btn-ghost github-link">
+        <a href="https://github.com/KarthikPabbisetti/GemVault" target="_blank" rel="noopener noreferrer" class="btn btn-ghost github-link">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
             <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
           </svg>
           <span>Star</span>
         </a>
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary">Download APK</a>
+        <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary">Download APK</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -92,7 +93,7 @@
         </p>
 
         <div class="hero-cta-group">
-          <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary btn-lg">
+          <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -100,7 +101,7 @@
             </svg>
             <span>Download Latest APK (v1.4)</span>
           </a>
-          <a href="https://github.com/Chiluvuru-Bhargavi/GemVault" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+          <a href="https://github.com/KarthikPabbisetti/GemVault" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
             <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
               <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
@@ -122,8 +123,25 @@
         </div>
       </div>
 
-      <!-- Right Column: Interactive Pure-CSS Android Phone Mockup -->
+      <!-- Right Column: Interactive Pure-CSS Android Phone Mockup with 3-View Switcher -->
       <div class="hero-mockup-wrapper">
+        
+        <!-- View Switcher Tabs -->
+        <div class="mockup-view-tabs" role="tablist" aria-label="Device Preview View">
+          <button class="mockup-tab-btn active" id="tabViewApp" data-view="app" role="tab" aria-selected="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <span>App Interface</span>
+          </button>
+          <button class="mockup-tab-btn" id="tabViewDemo" data-view="demo" role="tab" aria-selected="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Shorts Interceptor</span>
+          </button>
+          <button class="mockup-tab-btn" id="tabViewHome" data-view="home" role="tab" aria-selected="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Launcher</span>
+          </button>
+        </div>
+
         <div class="phone-mockup-container">
           <!-- Hardware Buttons -->
           <div class="phone-btn phone-btn-volume-up"></div>
@@ -140,152 +158,268 @@
                 <span class="camera-lens"></span>
               </div>
 
-              <!-- Android Status Bar -->
-              <div class="phone-status-bar">
-                <span class="status-clock" id="statusClock">14:02</span>
-                <div class="status-icons">
-                  <!-- 5G / Signal Icon -->
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                    <rect x="2" y="16" width="3" height="6" rx="1"/>
-                    <rect x="7" y="12" width="3" height="10" rx="1"/>
-                    <rect x="12" y="8" width="3" height="14" rx="1"/>
-                    <rect x="17" y="4" width="3" height="18" rx="1"/>
-                  </svg>
-                  <!-- Wi-Fi Icon -->
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
-                    <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
-                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
-                    <line x1="12" y1="20" x2="12.01" y2="20"/>
-                  </svg>
-                  <!-- Battery Icon -->
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="7" width="16" height="10" rx="2" ry="2"/>
-                    <line x1="22" y1="11" x2="22" y2="13"/>
-                    <rect x="4" y="9" width="10" height="6" fill="#27A644" stroke="none"/>
-                  </svg>
+              <!-- VIEW 1: Real Native Android App UI (User Screenshot) -->
+              <div class="phone-view phone-view-app active" id="viewApp">
+                <img src="./assets/gemvault-app-screen.jpg" alt="GemVault Native Android App Screen" class="real-screen-img">
+                <div class="real-screen-floating-tag">
+                  <span class="badge-dot green"></span>
+                  <span>Live Production Kotlin UI</span>
                 </div>
               </div>
 
-              <!-- GemVault Active HUD Banner -->
-              <div class="mockup-hud">
-                <div class="hud-left">
-                  <span class="hud-indicator active"></span>
-                  <span class="hud-title">GemVault Service</span>
-                </div>
-                <div class="hud-right">
-                  <span class="hud-counter" id="mockupBlockedCount">Blocked: 0</span>
-                </div>
-              </div>
-
-              <!-- Telemetry Overlay Flash for Interception -->
-              <div class="interception-overlay" id="interceptionOverlay">
-                <div class="interception-badge">
-                  <span class="intercept-icon">⚡</span>
-                  <div class="intercept-details">
-                    <span class="intercept-action">GLOBAL_ACTION_BACK FIRED</span>
-                    <span class="intercept-node">reel_recycler [9:16] INTERCEPTED (3ms)</span>
+              <!-- VIEW 2: Interactive YouTube Shorts Interception Simulation -->
+              <div class="phone-view phone-view-demo" id="viewDemo">
+                <!-- Android Status Bar -->
+                <div class="phone-status-bar">
+                  <span class="status-clock" id="statusClock">14:02</span>
+                  <div class="status-icons">
+                    <!-- 5G / Signal Icon -->
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                      <rect x="2" y="16" width="3" height="6" rx="1"/>
+                      <rect x="7" y="12" width="3" height="10" rx="1"/>
+                      <rect x="12" y="8" width="3" height="14" rx="1"/>
+                      <rect x="17" y="4" width="3" height="18" rx="1"/>
+                    </svg>
+                    <!-- Wi-Fi Icon -->
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                      <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                      <line x1="12" y1="20" x2="12.01" y2="20"/>
+                    </svg>
+                    <!-- Battery Icon -->
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="16" height="10" rx="2" ry="2"/>
+                      <line x1="22" y1="11" x2="22" y2="13"/>
+                      <rect x="4" y="9" width="10" height="6" fill="#27A644" stroke="none"/>
+                    </svg>
                   </div>
                 </div>
-              </div>
 
-              <!-- Simulated YouTube App Header -->
-              <div class="yt-header">
-                <div class="yt-brand">
-                  <span class="yt-logo-icon">▶</span>
-                  <span class="yt-logo-text">YouTube</span>
+                <!-- GemVault Active HUD Banner -->
+                <div class="mockup-hud">
+                  <div class="hud-left">
+                    <span class="hud-indicator active"></span>
+                    <span class="hud-title">GemVault Service</span>
+                  </div>
+                  <div class="hud-right">
+                    <span class="hud-counter" id="mockupBlockedCount">Blocked: 0</span>
+                  </div>
                 </div>
-                <div class="yt-actions">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                  <span class="yt-avatar">K</span>
-                </div>
-              </div>
 
-              <!-- Simulated YouTube Feed Container -->
-              <div class="yt-feed">
-                <!-- Allowed 16:9 Long-Form Video -->
-                <div class="yt-card yt-card-allowed" id="cardAllowed" tabindex="0" role="button" aria-label="Horizontal Educational Video">
-                  <div class="yt-thumb-169">
-                    <div class="thumb-inner">
-                      <span class="lecture-badge">MIT 6.824</span>
-                      <span class="lecture-play">▶</span>
-                      <span class="lecture-duration">1:24:10</span>
+                <!-- Telemetry Overlay Flash for Interception -->
+                <div class="interception-overlay" id="interceptionOverlay">
+                  <div class="interception-badge">
+                    <span class="intercept-icon">⚡</span>
+                    <div class="intercept-details">
+                      <span class="intercept-action">GLOBAL_ACTION_BACK FIRED</span>
+                      <span class="intercept-node">reel_recycler [9:16] INTERCEPTED (3ms)</span>
                     </div>
                   </div>
-                  <div class="yt-card-info">
-                    <div class="yt-channel-avatar">M</div>
-                    <div class="yt-meta">
-                      <div class="yt-video-title">Distributed Systems: Raft Consensus</div>
-                      <div class="yt-channel-meta">MIT OpenCourseWare • 412K views</div>
-                      <div class="yt-status-badge pass" id="allowedBadge">
-                        <span class="badge-dot"></span> NODE_SCAN: HORIZONTAL_PLAYER [16:9] · ALLOWED
+                </div>
+
+                <!-- Simulated YouTube App Header -->
+                <div class="yt-header">
+                  <div class="yt-brand">
+                    <span class="yt-logo-icon">▶</span>
+                    <span class="yt-logo-text">YouTube</span>
+                  </div>
+                  <div class="yt-actions">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span class="yt-avatar">K</span>
+                  </div>
+                </div>
+
+                <!-- Simulated YouTube Feed Container -->
+                <div class="yt-feed">
+                  <!-- Allowed 16:9 Long-Form Video -->
+                  <div class="yt-card yt-card-allowed" id="cardAllowed" tabindex="0" role="button" aria-label="Horizontal Educational Video">
+                    <div class="yt-thumb-169">
+                      <div class="thumb-inner">
+                        <span class="lecture-badge">MIT 6.824</span>
+                        <span class="lecture-play">▶</span>
+                        <span class="lecture-duration">1:24:10</span>
+                      </div>
+                    </div>
+                    <div class="yt-card-info">
+                      <div class="yt-channel-avatar">M</div>
+                      <div class="yt-meta">
+                        <div class="yt-video-title">Distributed Systems: Raft Consensus</div>
+                        <div class="yt-channel-meta">MIT OpenCourseWare • 412K views</div>
+                        <div class="yt-status-badge pass" id="allowedBadge">
+                          <span class="badge-dot"></span> NODE_SCAN: HORIZONTAL_PLAYER [16:9] · ALLOWED
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Shorts Shelf to Intercept -->
+                  <div class="yt-shorts-shelf">
+                    <div class="shelf-header">
+                      <div class="shelf-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#EB5757"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                        <span>Shorts Shelf</span>
+                      </div>
+                      <span class="shelf-flag">SURGICAL TRAP</span>
+                    </div>
+
+                    <!-- Interceptable Short Card -->
+                    <div class="yt-card yt-card-short" id="cardShort" tabindex="0" role="button" aria-label="Interceptable YouTube Short">
+                      <div class="short-thumb-916">
+                        <div class="short-badge">Shorts</div>
+                        <div class="short-click-prompt">
+                          <span class="click-hand">👉</span>
+                          <span class="click-text">Click to Intercept!</span>
+                        </div>
+                      </div>
+                      <div class="short-info">
+                        <div class="short-title">Infinite Dopamine Reel #89...</div>
+                        <div class="short-views">8.4M views</div>
+                        <div class="short-intercept-tag">
+                          <span class="tag-pulse"></span> AUTO-BACK ACTIVE
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Shorts Shelf to Intercept -->
-                <div class="yt-shorts-shelf">
-                  <div class="shelf-header">
-                    <div class="shelf-title">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#EB5757"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-                      <span>Shorts Shelf</span>
-                    </div>
-                    <span class="shelf-flag">SURGICAL TRAP</span>
+                <!-- YouTube Simulated Bottom Navigation -->
+                <div class="yt-bottom-nav">
+                  <div class="nav-tab active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    <span>Home</span>
                   </div>
-
-                  <!-- Interceptable Short Card -->
-                  <div class="yt-card yt-card-short" id="cardShort" tabindex="0" role="button" aria-label="Interceptable YouTube Short">
-                    <div class="short-thumb-916">
-                      <div class="short-badge">Shorts</div>
-                      <div class="short-click-prompt">
-                        <span class="click-hand">👉</span>
-                        <span class="click-text">Click to Intercept!</span>
-                      </div>
-                    </div>
-                    <div class="short-info">
-                      <div class="short-title">Infinite Dopamine Reel #89...</div>
-                      <div class="short-views">8.4M views</div>
-                      <div class="short-intercept-tag">
-                        <span class="tag-pulse"></span> AUTO-BACK ACTIVE
-                      </div>
-                    </div>
+                  <div class="nav-tab tab-shorts-blocked" id="tabShortsBlocked">
+                    <span class="shorts-block-dot">✕</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                    <span>Shorts</span>
+                  </div>
+                  <div class="nav-tab">
+                    <span class="plus-circle">+</span>
+                  </div>
+                  <div class="nav-tab">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                    <span>Subs</span>
+                  </div>
+                  <div class="nav-tab">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v12H4z"/></svg>
+                    <span>You</span>
                   </div>
                 </div>
               </div>
 
-              <!-- YouTube Simulated Bottom Navigation -->
-              <div class="yt-bottom-nav">
-                <div class="nav-tab active">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                  <span>Home</span>
-                </div>
-                <div class="nav-tab tab-shorts-blocked" id="tabShortsBlocked">
-                  <span class="shorts-block-dot">✕</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-                  <span>Shorts</span>
-                </div>
-                <div class="nav-tab">
-                  <span class="plus-circle">+</span>
-                </div>
-                <div class="nav-tab">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-                  <span>Subs</span>
-                </div>
-                <div class="nav-tab">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v12H4z"/></svg>
-                  <span>You</span>
+              <!-- VIEW 3: Real Android Home Screen with GemVault Icon (User Screenshot) -->
+              <div class="phone-view phone-view-home" id="viewHome">
+                <img src="./assets/gemvault-home-icon.jpg" alt="GemVault Android Home Launcher Icon" class="real-screen-img">
+                <div class="real-screen-floating-tag">
+                  <span class="badge-dot purple"></span>
+                  <span>Android 14 Home Launcher</span>
                 </div>
               </div>
 
             </div>
           </div>
         </div>
-        <p class="mockup-caption">
-          <span class="caption-mono">LIVE INTERACTIVE MOCKUP:</span> Tap the vertical Short or horizontal lecture above to test <span class="caption-code">ShortsBlockerService.kt</span> in real-time.
+        <p class="mockup-caption" id="mockupCaption">
+          <span class="caption-mono">ACTUAL PRODUCTION SCREENSHOT:</span> Native Kotlin interface showing detox timer wheel and strict anti-uninstall toggle.
         </p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 2.5 REAL PRODUCTION APP SHOWCASE                                          -->
+  <!-- ========================================================================= -->
+  <section class="showcase-section" id="preview">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">01 // PRODUCTION_PREVIEWS</span>
+        <h2 class="section-title">Actual Device Screenshots. Clean & Distraction-Free.</h2>
+        <p class="section-subtitle">
+          No conceptual mockups or vaporware. Here is GemVault running live on native Android—delivering deterministic control over your focus sessions.
+        </p>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- Showcase Card 1: App Interface -->
+        <div class="showcase-card">
+          <div class="showcase-card-media">
+            <div class="showcase-frame">
+              <img src="./assets/gemvault-app-screen.jpg" alt="GemVault Detox Duration & Strict Mode Screen" class="showcase-img" loading="lazy">
+            </div>
+          </div>
+          <div class="showcase-card-content">
+            <div class="showcase-badge">
+              <span class="badge-dot green"></span>
+              CORE APP INTERFACE
+            </div>
+            <h3 class="showcase-title">Detox Timer & Anti-Tamper Engine</h3>
+            <p class="showcase-desc">
+              Clean, distraction-free interface built with native Android components. Configure your custom focus session down to the exact minute.
+            </p>
+            <ul class="showcase-features">
+              <li>
+                <span class="feature-icon">⏱</span>
+                <div>
+                  <strong>Hours & Minutes Wheel:</strong> Intuitive duration picker for instant session commitment.
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">🔒</span>
+                <div>
+                  <strong>Strict Mode Toggle:</strong> Disables cancellation and intercepts device settings to block mid-session uninstallation.
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">⚡</span>
+                <div>
+                  <strong>Instant Start/Cancel Guards:</strong> Immediate feedback with zero background clutter.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Showcase Card 2: Launcher & Lightweight Footprint -->
+        <div class="showcase-card reverse">
+          <div class="showcase-card-media">
+            <div class="showcase-frame">
+              <img src="./assets/gemvault-home-icon.jpg" alt="GemVault Android Home Screen Launcher" class="showcase-img" loading="lazy">
+            </div>
+          </div>
+          <div class="showcase-card-content">
+            <div class="showcase-badge">
+              <span class="badge-dot purple"></span>
+              ZERO-BLOAT LAUNCHER
+            </div>
+            <h3 class="showcase-title">Lightweight, Offline & Always Ready</h3>
+            <p class="showcase-desc">
+              Engineered with zero third-party telemetry, zero advertisement SDKs, and zero network sockets. What happens on your device stays on your device.
+            </p>
+            <ul class="showcase-features">
+              <li>
+                <span class="feature-icon">🛡</span>
+                <div>
+                  <strong>Kernel-Enforced Air Gap:</strong> <code class="inline-code">android.permission.INTERNET</code> is completely omitted from the manifest.
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">🔋</span>
+                <div>
+                  <strong>Flat Battery Consumption:</strong> Event-driven accessibility hooks with deterministic <code class="inline-code">.recycle()</code> memory management.
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">📦</span>
+                <div>
+                  <strong>Sub-5MB APK Footprint:</strong> Fast download, instant install, and zero background CPU usage when idle.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -295,7 +429,7 @@
   <section class="modes-section" id="modes">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-tag">01 // OPERATIONAL_PROFILES</span>
+        <span class="section-tag">02 // OPERATIONAL_PROFILES</span>
         <h2 class="section-title">Two Modes of Engagement. Zero Compromises.</h2>
         <p class="section-subtitle">
           Filter out algorithmic dopamine traps while keeping educational video accessible, or seal the vault completely with kernel-anchored anti-tamper guards.
@@ -459,7 +593,7 @@
   <section class="security-section" id="security">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-tag">02 // HARDENED_ENGINEERING</span>
+        <span class="section-tag">03 // HARDENED_ENGINEERING</span>
         <h2 class="section-title">Engineered Against Every Loophole.</h2>
         <p class="section-subtitle">
           Built in native Kotlin with strict lifecycle hygiene. GemVault closes the OS-level exploits that render conventional screen-time apps obsolete.
@@ -610,7 +744,7 @@
   <section class="architecture-section" id="architecture">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-tag">03 // CORE_ARCHITECTURE</span>
+        <span class="section-tag">04 // CORE_ARCHITECTURE</span>
         <h2 class="section-title">Separation of Concerns: Gating vs. Interception.</h2>
         <p class="section-subtitle">
           How GemVault orchestrates foreground configuration with background event dispatching in zero-latency Kotlin.
@@ -730,7 +864,7 @@
   <section class="permissions-section" id="permissions">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-tag">04 // ZERO_TRUST_VERIFICATION</span>
+        <span class="section-tag">05 // ZERO_TRUST_VERIFICATION</span>
         <h2 class="section-title">High Privilege. Zero Network Access.</h2>
         <p class="section-subtitle">
           GemVault requires deep OS hooks to intercept UI nodes and block uninstallation—so it completely strips out network capabilities. What happens on the view tree stays in volatile RAM.
@@ -792,7 +926,7 @@
             Every line of Kotlin in GemVault is open-source and reproducible. Inspect the AccessibilityService traversal loop, verify the complete absence of network sockets in AndroidManifest.xml, or compile the APK from source via Gradle.
           </p>
         </div>
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/blob/main/app/src/main/AndroidManifest.xml" target="_blank" rel="noopener noreferrer" class="btn btn-secondary audit-btn">
+        <a href="https://github.com/KarthikPabbisetti/GemVault/blob/main/app/src/main/AndroidManifest.xml" target="_blank" rel="noopener noreferrer" class="btn btn-secondary audit-btn">
           <span>View AndroidManifest.xml →</span>
         </a>
       </div>
@@ -806,7 +940,7 @@
   <section class="faq-section" id="faq">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-tag">05 // TECHNICAL_FAQ</span>
+        <span class="section-tag">06 // TECHNICAL_FAQ</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
         <p class="section-subtitle">
           Direct, engineering-first answers to common implementation and usability queries.
@@ -891,7 +1025,7 @@
       </p>
 
       <div class="conversion-actions">
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary btn-xl">
+        <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary btn-xl">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
@@ -903,7 +1037,7 @@
         <!-- One-Click Git Clone Snippet -->
         <div class="git-clone-pill" id="gitClonePill" tabindex="0" role="button" aria-label="Copy Git Clone Command">
           <span class="clone-prompt">$</span>
-          <span class="clone-cmd">git clone https://github.com/Chiluvuru-Bhargavi/GemVault.git</span>
+          <span class="clone-cmd">git clone https://github.com/KarthikPabbisetti/GemVault.git</span>
           <button class="clone-btn" aria-label="Copy command">
             <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
@@ -939,10 +1073,10 @@
       </div>
 
       <div class="footer-right">
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/releases" target="_blank" rel="noopener noreferrer" class="footer-link">Releases</a>
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault" target="_blank" rel="noopener noreferrer" class="footer-link">Source Code</a>
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/issues" target="_blank" rel="noopener noreferrer" class="footer-link">Issue Tracker</a>
-        <a href="https://github.com/Chiluvuru-Bhargavi/GemVault/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a>
+        <a href="https://github.com/KarthikPabbisetti/GemVault/releases" target="_blank" rel="noopener noreferrer" class="footer-link">Releases</a>
+        <a href="https://github.com/KarthikPabbisetti/GemVault" target="_blank" rel="noopener noreferrer" class="footer-link">Source Code</a>
+        <a href="https://github.com/KarthikPabbisetti/GemVault/issues" target="_blank" rel="noopener noreferrer" class="footer-link">Issue Tracker</a>
+        <a href="https://github.com/KarthikPabbisetti/GemVault/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a>
       </div>
     </div>
   </footer>
