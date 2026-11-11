@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GemVault — Anti-Tamper Digital Discipline for Android</title>
-  <meta name="description" content="GemVault is an open-source, anti-tamper digital discipline and YouTube Shorts blocker built in native Kotlin. Surgical UI node interception with zero network permissions.">
+  <title>GemVault — Dual-Engine Digital Discipline for Android</title>
+  <meta name="description" content="GemVault is an open-source, anti-tamper digital discipline app blocking YouTube Shorts and Instagram Reels independently, built in native Kotlin. Dual monotonic timers, surgical UI node interception, zero network permissions.">
   <meta name="theme-color" content="#010102">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="./">
-  <meta property="og:title" content="GemVault — Anti-Tamper Digital Discipline for Android">
-  <meta property="og:description" content="Surgical Shorts Interception. Zero-Bypass Lockdown. Native Kotlin, AccessibilityNodeInfo inspection, monotonic clock anti-tamper.">
+  <meta property="og:title" content="GemVault — Dual-Engine Digital Discipline for Android">
+  <meta property="og:description" content="Block YouTube Shorts & Instagram Reels independently. Dual monotonic timer engines, Zero-Bypass Lockdown. Native Kotlin, AccessibilityNodeInfo inspection, monotonic clock anti-tamper.">
   <meta property="og:image" content="./assets/favicon.svg">
 
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
@@ -39,7 +39,7 @@
           </svg>
         </div>
         <span class="brand-name">GemVault</span>
-        <span class="version-tag">v1.4.0 · Kotlin</span>
+        <span class="version-tag">v2.0.0 · Kotlin</span>
       </a>
 
       <nav class="nav-menu" id="navMenu">
@@ -59,7 +59,7 @@
           </svg>
           <span>Star</span>
         </a>
-        <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary">Download APK</a>
+        <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.1/app-release.apk" class="btn btn-primary">Download APK</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -80,26 +80,26 @@
       <div class="hero-content">
         <div class="eyebrow-pill">
           <span class="status-pulse"></span>
-          <span class="eyebrow-text">KOTLIN NATIVE • ACCESSIBILITY SERVICE • ZERO TELEMETRY</span>
+          <span class="eyebrow-text">KOTLIN NATIVE • YOUTUBE + INSTAGRAM • ZERO TELEMETRY</span>
         </div>
 
         <h1 class="hero-title">
-          Surgical Shorts Interception. <br>
-          <span class="gradient-text">Zero-Bypass Lockdown.</span>
+          Dual-Engine Shorts Blocker. <br>
+          <span class="gradient-text">YouTube & Instagram. Zero Bypass.</span>
         </h1>
 
         <p class="hero-description">
-          Standard screen-time blockers fail at midnight because wall-clock timers and permissions can be undone in five seconds. GemVault inspects UI accessibility nodes in real time to kill YouTube Shorts while preserving long-form video—or locks down the entire package installer with monotonic, tamper-proof timers.
+          Standard screen-time blockers fail because wall-clock timers and permissions can be undone in five seconds. GemVault runs two independent monotonic timer engines—one for YouTube Shorts, one for Instagram Reels—surgically intercepting short-form content via accessibility nodes while keeping long-form video, DMs, and profiles fully accessible.
         </p>
 
         <div class="hero-cta-group">
-          <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary btn-lg">
+          <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.1/app-release.apk" class="btn btn-primary btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
               <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            <span>Download Latest APK (v1.4)</span>
+            <span>Download Latest APK (v2.0.0)</span>
           </a>
           <a href="https://github.com/KarthikPabbisetti/GemVault" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
             <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
@@ -128,17 +128,21 @@
         
         <!-- View Switcher Tabs -->
         <div class="mockup-view-tabs" role="tablist" aria-label="Device Preview View">
-          <button class="mockup-tab-btn active" id="tabViewApp" data-view="app" role="tab" aria-selected="true">
+          <button class="mockup-tab-btn active" id="tabViewDashboard" data-view="dashboard" role="tab" aria-selected="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <span>Dashboard</span>
+          </button>
+          <button class="mockup-tab-btn" id="tabViewApp" data-view="app" role="tab" aria-selected="false">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            <span>App Interface</span>
+            <span>YouTube</span>
           </button>
           <button class="mockup-tab-btn" id="tabViewDemo" data-view="demo" role="tab" aria-selected="false">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span>Shorts Interceptor</span>
+            <span>Interceptor</span>
           </button>
-          <button class="mockup-tab-btn" id="tabViewHome" data-view="home" role="tab" aria-selected="false">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span>Launcher</span>
+          <button class="mockup-tab-btn" id="tabViewIg" data-view="ig" role="tab" aria-selected="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Instagram</span>
           </button>
         </div>
 
@@ -158,16 +162,25 @@
                 <span class="camera-lens"></span>
               </div>
 
-              <!-- VIEW 1: Real Native Android App UI (User Screenshot) -->
-              <div class="phone-view phone-view-app active" id="viewApp">
-                <img src="./assets/gemvault-app-screen.jpg" alt="GemVault Native Android App Screen" class="real-screen-img">
+              <!-- VIEW 1: Dashboard (Main Hub) -->
+              <div class="phone-view phone-view-dashboard active" id="viewDashboard">
+                <img src="./assets/gemvault-dashboard.jpg" alt="GemVault Main Hub Dashboard showing YouTube and Instagram cards" class="real-screen-img">
                 <div class="real-screen-floating-tag">
                   <span class="badge-dot green"></span>
-                  <span>Live Production Kotlin UI</span>
+                  <span>Main Hub — Dual-Engine Dashboard</span>
                 </div>
               </div>
 
-              <!-- VIEW 2: Interactive YouTube Shorts Interception Simulation -->
+              <!-- VIEW 2: YouTube Settings Screen -->
+              <div class="phone-view phone-view-app" id="viewApp">
+                <img src="./assets/gemvault-youtube-settings.jpg" alt="GemVault YouTube Settings — Timer Wheel & Strict Mode" class="real-screen-img">
+                <div class="real-screen-floating-tag">
+                  <span class="badge-dot green"></span>
+                  <span>YouTube Timer · Strict Mode Toggle</span>
+                </div>
+              </div>
+
+              <!-- VIEW 3: Interactive YouTube Shorts Interception Simulation -->
               <div class="phone-view phone-view-demo" id="viewDemo">
                 <!-- Android Status Bar -->
                 <div class="phone-status-bar">
@@ -308,12 +321,12 @@
                 </div>
               </div>
 
-              <!-- VIEW 3: Real Android Home Screen with GemVault Icon (User Screenshot) -->
-              <div class="phone-view phone-view-home" id="viewHome">
-                <img src="./assets/gemvault-home-icon.jpg" alt="GemVault Android Home Launcher Icon" class="real-screen-img">
+              <!-- VIEW 4: Instagram Settings Screen -->
+              <div class="phone-view phone-view-ig" id="viewIg">
+                <img src="./assets/gemvault-instagram-settings.jpg" alt="GemVault Instagram Settings — Timer Wheel & Strict Mode" class="real-screen-img">
                 <div class="real-screen-floating-tag">
-                  <span class="badge-dot purple"></span>
-                  <span>Android 14 Home Launcher</span>
+                  <span class="badge-dot" style="background:#E1306C;box-shadow:0 0 6px #E1306C;"></span>
+                  <span>Instagram Timer · Independent Engine</span>
                 </div>
               </div>
 
@@ -321,7 +334,7 @@
           </div>
         </div>
         <p class="mockup-caption" id="mockupCaption">
-          <span class="caption-mono">ACTUAL PRODUCTION SCREENSHOT:</span> Native Kotlin interface showing detox timer wheel and strict anti-uninstall toggle.
+          <span class="caption-mono">DUAL-ENGINE DASHBOARD:</span> Main hub showing independent YouTube &amp; Instagram blocker cards with live status badges.
         </p>
       </div>
 
@@ -335,105 +348,187 @@
     <div class="section-container">
       <div class="section-header text-center">
         <span class="section-tag">01 // PRODUCTION_PREVIEWS</span>
-        <h2 class="section-title">Actual Device Screenshots. Clean & Distraction-Free.</h2>
+        <h2 class="section-title">3-Screen App. Dual Engines. Zero Fluff.</h2>
         <p class="section-subtitle">
-          No conceptual mockups or vaporware. Here is GemVault running live on native Android—delivering deterministic control over your focus sessions.
+          No conceptual mockups or vaporware. Here is GemVault v2.0.0 running live on native Android—delivering deterministic, independent control over YouTube and Instagram focus sessions.
         </p>
       </div>
 
       <div class="showcase-grid">
-        <!-- Showcase Card 1: App Interface -->
+        <!-- Showcase Card 1: Main Hub Dashboard -->
         <div class="showcase-card">
           <div class="showcase-card-media">
             <div class="showcase-frame">
-              <img src="./assets/gemvault-app-screen.jpg" alt="GemVault Detox Duration & Strict Mode Screen" class="showcase-img" loading="lazy">
+              <img src="./assets/gemvault-dashboard.jpg" alt="GemVault Main Hub — YouTube &amp; Instagram Blocker Cards" class="showcase-img" loading="lazy">
             </div>
           </div>
           <div class="showcase-card-content">
             <div class="showcase-badge">
               <span class="badge-dot green"></span>
-              CORE APP INTERFACE
+              MAIN HUB · DUAL-ENGINE DASHBOARD
             </div>
-            <h3 class="showcase-title">Detox Timer & Anti-Tamper Engine</h3>
+            <h3 class="showcase-title">At-a-Glance Dual Blocker Control</h3>
             <p class="showcase-desc">
-              Clean, distraction-free interface built with native Android components. Configure your custom focus session down to the exact minute.
+              The home hub displays two dedicated selection cards—YouTube Shorts Blocker and Instagram Reels Blocker—each with a live status badge showing active countdowns at a glance.
             </p>
             <ul class="showcase-features">
               <li>
-                <span class="feature-icon">⏱</span>
+                <span class="feature-icon">📱</span>
                 <div>
-                  <strong>Hours & Minutes Wheel:</strong> Intuitive duration picker for instant session commitment.
+                  <strong>3-Tier Navigation:</strong> Dashboard → YouTube Settings | Instagram Settings with clean Back navigation.
                 </div>
               </li>
               <li>
-                <span class="feature-icon">🔒</span>
+                <span class="feature-icon">📊</span>
                 <div>
-                  <strong>Strict Mode Toggle:</strong> Disables cancellation and intercepts device settings to block mid-session uninstallation.
+                  <strong>Live Status Badges:</strong> Each card shows "Inactive" or "Active: 45m left" without entering sub-menus.
                 </div>
               </li>
               <li>
                 <span class="feature-icon">⚡</span>
                 <div>
-                  <strong>Instant Start/Cancel Guards:</strong> Immediate feedback with zero background clutter.
+                  <strong>Independent Engines:</strong> Both timers run simultaneously without interference on separate monotonic clocks.
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- Showcase Card 2: Launcher & Lightweight Footprint -->
+        <!-- Showcase Card 2: YouTube Settings -->
         <div class="showcase-card reverse">
           <div class="showcase-card-media">
             <div class="showcase-frame">
-              <img src="./assets/gemvault-home-icon.jpg" alt="GemVault Android Home Screen Launcher" class="showcase-img" loading="lazy">
+              <img src="./assets/gemvault-youtube-settings.jpg" alt="GemVault YouTube Settings — Timer Wheel &amp; Strict Mode Toggle" class="showcase-img" loading="lazy">
             </div>
           </div>
           <div class="showcase-card-content">
             <div class="showcase-badge">
-              <span class="badge-dot purple"></span>
-              ZERO-BLOAT LAUNCHER
+              <span class="badge-dot green"></span>
+              YOUTUBE ENGINE · TIMER 1
             </div>
-            <h3 class="showcase-title">Lightweight, Offline & Always Ready</h3>
+            <h3 class="showcase-title">YouTube Detox Timer &amp; Strict Mode</h3>
             <p class="showcase-desc">
-              Engineered with zero third-party telemetry, zero advertisement SDKs, and zero network sockets. What happens on your device stays on your device.
+              Dedicated Hour/Minute wheel pickers for Timer 1, an independent countdown display, and a Strict Mode toggle that locks mid-session to prevent impulsive rule changes.
             </p>
             <ul class="showcase-features">
               <li>
-                <span class="feature-icon">🛡</span>
+                <span class="feature-icon">⏱</span>
                 <div>
-                  <strong>Kernel-Enforced Air Gap:</strong> <code class="inline-code">android.permission.INTERNET</code> is completely omitted from the manifest.
+                  <strong>Dedicated Timer 1:</strong> <code class="inline-code">yt_timer_end_elapsed</code> anchored to monotonic hardware clock, survives reboots.
                 </div>
               </li>
               <li>
-                <span class="feature-icon">🔋</span>
+                <span class="feature-icon">🔒</span>
                 <div>
-                  <strong>Flat Battery Consumption:</strong> Event-driven accessibility hooks with deterministic <code class="inline-code">.recycle()</code> memory management.
+                  <strong>Strict Mode:</strong> Ejects to Home screen the instant <code class="inline-code">com.google.android.youtube</code> opens. Zero access.
                 </div>
               </li>
               <li>
-                <span class="feature-icon">📦</span>
+                <span class="feature-icon">✅</span>
                 <div>
-                  <strong>Sub-5MB APK Footprint:</strong> Fast download, instant install, and zero background CPU usage when idle.
+                  <strong>Non-Strict Mode:</strong> Surgical Shorts intercept via <code class="inline-code">GLOBAL_ACTION_BACK</code>. Long-form video fully accessible.
                 </div>
               </li>
             </ul>
           </div>
         </div>
+
+        <!-- Showcase Card 3: Instagram Settings -->
+        <div class="showcase-card">
+          <div class="showcase-card-media">
+            <div class="showcase-frame">
+              <img src="./assets/gemvault-instagram-settings.jpg" alt="GemVault Instagram Settings — Independent Timer &amp; Strict Mode Toggle" class="showcase-img" loading="lazy">
+            </div>
+          </div>
+          <div class="showcase-card-content">
+            <div class="showcase-badge" style="border-color: rgba(225,48,108,0.3); background: rgba(225,48,108,0.08);">
+              <span class="badge-dot" style="background:#E1306C;box-shadow:0 0 6px #E1306C;"></span>
+              INSTAGRAM ENGINE · TIMER 2
+            </div>
+            <h3 class="showcase-title">Instagram Reels Timer &amp; Strict Mode</h3>
+            <p class="showcase-desc">
+              A fully independent timer engine for Instagram. Set a 1-hour YouTube block and a 2-hour Instagram block simultaneously—both tick down side by side without interference.
+            </p>
+            <ul class="showcase-features">
+              <li>
+                <span class="feature-icon">⏱</span>
+                <div>
+                  <strong>Dedicated Timer 2:</strong> <code class="inline-code">ig_timer_end_elapsed</code> runs fully independently of Timer 1 on its own monotonic anchor.
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">🔒</span>
+                <div>
+                  <strong>Strict Mode:</strong> <code class="inline-code">GLOBAL_ACTION_HOME</code> fires the instant <code class="inline-code">com.instagram.android</code> opens.
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">✅</span>
+                <div>
+                  <strong>Non-Strict Mode:</strong> Debounced back on Reels viewpager detection. DMs, profiles &amp; feed photos remain accessible.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 3. INTERACTIVE OPERATIONAL MODES SWITCHER                                 -->
+  <!-- 3. INTERACTIVE OPERATIONAL MODES & ENFORCEMENT MATRIX                      -->
   <!-- ========================================================================= -->
   <section class="modes-section" id="modes">
     <div class="section-container">
       <div class="section-header text-center">
         <span class="section-tag">02 // OPERATIONAL_PROFILES</span>
-        <h2 class="section-title">Two Modes of Engagement. Zero Compromises.</h2>
+        <h2 class="section-title">Four Operational States. Dual Engine Control.</h2>
         <p class="section-subtitle">
-          Filter out algorithmic dopamine traps while keeping educational video accessible, or seal the vault completely with kernel-anchored anti-tamper guards.
+          Surgically filter out algorithmic dopamine traps on YouTube and Instagram independently, or engage total app blackout with kernel-anchored anti-tamper guards.
         </p>
+      </div>
+
+      <!-- 4-State Enforcement Matrix Table -->
+      <div class="permission-table-card" style="margin-bottom: var(--space-8);">
+        <div class="table-responsive">
+          <table class="permission-table">
+            <thead>
+              <tr>
+                <th>Target Platform</th>
+                <th>Operating Mode</th>
+                <th>Enforcement Action</th>
+                <th>What Remains Accessible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag-badge red">YouTube</span></td>
+                <td><code class="code-pill">Non-Strict (Default)</code></td>
+                <td>Automatically dispatches <code class="inline-code">GLOBAL_ACTION_BACK</code> when Shorts view nodes or layouts are detected.</td>
+                <td><span class="tag-badge green">Long-form videos, subscriptions, search, playlists</span></td>
+              </tr>
+              <tr>
+                <td><span class="tag-badge red">YouTube</span></td>
+                <td><code class="code-pill red-pill">Strict Mode</code></td>
+                <td>Ejects user immediately to Home screen (<code class="inline-code">GLOBAL_ACTION_HOME</code>) whenever <code class="inline-code">com.google.android.youtube</code> opens.</td>
+                <td><span class="tag-badge airgap">None (Total App Blackout)</span></td>
+              </tr>
+              <tr>
+                <td><span class="tag-badge ig-badge">Instagram</span></td>
+                <td><code class="code-pill">Non-Strict (Default)</code></td>
+                <td>Inspects hierarchy for Reels viewpagers/tabs and triggers an instant debounced back gesture (<code class="inline-code">performBackWithDebounce</code>).</td>
+                <td><span class="tag-badge green">Direct Messages (DMs), search, user profiles, feed photos</span></td>
+              </tr>
+              <tr>
+                <td><span class="tag-badge ig-badge">Instagram</span></td>
+                <td><code class="code-pill red-pill">Strict Mode</code></td>
+                <td>Ejects user immediately to Home screen (<code class="inline-code">GLOBAL_ACTION_HOME</code>) whenever <code class="inline-code">com.instagram.android</code> opens.</td>
+                <td><span class="tag-badge airgap">None (Total App Blackout)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <!-- Segmented Interactive Switcher -->
@@ -460,9 +555,9 @@
               <span class="badge-dot"></span>
               SURGICAL UI FILTER · DEFAULT
             </div>
-            <h3 class="mode-card-title">Block Shorts. Keep Long-Form Educational Video.</h3>
+            <h3 class="mode-card-title">Block Shorts &amp; Reels. Keep Long-Form Video, DMs &amp; Feeds.</h3>
             <p class="mode-card-desc">
-              Traverses the active window hierarchy in real time via <code class="inline-code">AccessibilityNodeInfo</code>. The millisecond a vertical Short, reel shelf, or bottom navigation tab is tapped, GemVault dispatches <code class="inline-code">GLOBAL_ACTION_BACK</code>—ejecting the session from the short-form loop while leaving horizontal tutorials, lectures, and long-form videos untouched.
+              Traverses the active window hierarchy in real time via <code class="inline-code">AccessibilityNodeInfo</code>. The millisecond a vertical YouTube Short, reel shelf, bottom navigation tab, or Instagram Reels viewpager is detected, GemVault dispatches calibrated back actions—ejecting you from short-form loops while leaving tutorials, lectures, direct message threads, and profiles completely untouched.
             </p>
           </div>
 
@@ -472,26 +567,31 @@
               <span class="terminal-dot red"></span>
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
-              <span class="stage-title">NODE_TRAVERSAL_INSPECTOR // com.google.android.youtube</span>
+              <span class="stage-title">NODE_TRAVERSAL_INSPECTOR // YOUTUBE &amp; INSTAGRAM</span>
             </div>
             <div class="stage-body">
               <div class="telemetry-row pass">
                 <span class="node-time">00:00:01.004</span>
-                <span class="node-id">view.player_view [16:9]</span>
+                <span class="node-id">com.google.android.youtube / player_view [16:9]</span>
                 <span class="node-status">PASS (LONG_FORM_ALLOWED)</span>
               </div>
               <div class="telemetry-row intercept">
                 <span class="node-time">00:00:04.281</span>
-                <span class="node-id">reel_recycler [9:16]</span>
+                <span class="node-id">com.google.android.youtube / reel_recycler [9:16]</span>
                 <span class="node-status">GLOBAL_ACTION_BACK FIRED (3ms)</span>
               </div>
+              <div class="telemetry-row pass">
+                <span class="node-time">00:00:06.840</span>
+                <span class="node-id">com.instagram.android / direct_thread_view</span>
+                <span class="node-status">PASS (DMs FULLY ACCESSIBLE)</span>
+              </div>
               <div class="telemetry-row intercept">
-                <span class="node-time">00:00:05.109</span>
-                <span class="node-id">tab_shorts_button</span>
-                <span class="node-status">EJECTED TO HOME FEED</span>
+                <span class="node-time">00:00:08.120</span>
+                <span class="node-id">com.instagram.android / clips_viewer_viewpager</span>
+                <span class="node-status">performBackWithDebounce (EJECTED)</span>
               </div>
               <div class="telemetry-row pass">
-                <span class="node-time">00:00:05.112</span>
+                <span class="node-time">00:00:08.124</span>
                 <span class="node-id">node.recycle()</span>
                 <span class="node-status">0.0 MB LEAK DELTA</span>
               </div>
@@ -500,16 +600,16 @@
 
           <div class="mode-specs-grid">
             <div class="spec-item">
-              <span class="spec-label">Long-Form Video:</span>
+              <span class="spec-label">YouTube Long-Form:</span>
               <span class="spec-value success">100% Unrestricted</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Shorts Bottom Tab:</span>
-              <span class="spec-value danger">Aggressively Suppressed</span>
+              <span class="spec-label">Instagram DMs &amp; Profiles:</span>
+              <span class="spec-value success">Preserved via Debounce</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Home Shelf Clicks:</span>
-              <span class="spec-value danger">Intercepted (Back Fired)</span>
+              <span class="spec-label">Shorts &amp; Reels Shelves:</span>
+              <span class="spec-value danger">Instant Back Ejection</span>
             </div>
             <div class="spec-item">
               <span class="spec-label">Heap Consumption:</span>
@@ -523,11 +623,11 @@
           <div class="mode-card-header">
             <div class="mode-header-badge strict">
               <span class="badge-dot"></span>
-              MAXIMUM PROTECTION · ZERO BYPASS
+              MAXIMUM PROTECTION · INDEPENDENT LOCKOUT
             </div>
-            <h3 class="mode-card-title">Full YouTube Blackout + Anti-Tamper OS Guard.</h3>
+            <h3 class="mode-card-title">Full App Blackout + Anti-Tamper OS Guard.</h3>
             <p class="mode-card-desc">
-              Enforces a complete blackout of the YouTube application for the duration of the committed timer. Simultaneously monitors system package events to intercept <code class="inline-code">com.android.packageinstaller</code> and guards Android Settings, preventing permission revocation, force-stops, or uninstallation mid-session.
+              Enforces a total blackout of YouTube and/or Instagram for the committed timer durations. Once engaged, the respective Strict Mode toggle locks to prevent impulsive rule changes mid-session. Monitors system package events to intercept <code class="inline-code">com.android.packageinstaller</code> and guards Android Settings against uninstallation or permission revocation.
             </p>
           </div>
 
@@ -537,17 +637,22 @@
               <span class="terminal-dot red"></span>
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
-              <span class="stage-title">STRICT_LOCKDOWN_ENGINE // HARDWARE_MONOTONIC</span>
+              <span class="stage-title">STRICT_LOCKDOWN_ENGINE // DUAL_MONOTONIC_CLOCKS</span>
             </div>
             <div class="stage-body">
               <div class="telemetry-row strict-active">
-                <span class="node-time">LOCK_DURATION</span>
-                <span class="node-id">03:45:00 REMAINING</span>
-                <span class="node-status">MONOTONIC ANCHOR ACTIVE</span>
+                <span class="node-time">yt_timer_end_elapsed</span>
+                <span class="node-id">YouTube: 00:45:00 REMAINING</span>
+                <span class="node-status">TIMER 1 ACTIVE</span>
+              </div>
+              <div class="telemetry-row strict-active">
+                <span class="node-time">ig_timer_end_elapsed</span>
+                <span class="node-id">Instagram: 01:30:00 REMAINING</span>
+                <span class="node-status">TIMER 2 ACTIVE</span>
               </div>
               <div class="telemetry-row intercept">
                 <span class="node-time">EVENT_CATCH</span>
-                <span class="node-id">com.google.android.youtube</span>
+                <span class="node-id">com.google.android.youtube / com.instagram.android</span>
                 <span class="node-status">GLOBAL_ACTION_HOME FIRED</span>
               </div>
               <div class="telemetry-row intercept">
@@ -556,9 +661,9 @@
                 <span class="node-status">UNINSTALL ATTEMPT BLOCKED</span>
               </div>
               <div class="telemetry-row security">
-                <span class="node-time">DPM_ADMIN</span>
-                <span class="node-id">DevicePolicyManager</span>
-                <span class="node-status">AUTO-TEARDOWN AT 00:00:00</span>
+                <span class="node-time">ANTI_IMPULSE</span>
+                <span class="node-id">Strict Mode Toggle</span>
+                <span class="node-status">LOCKED UNTIL 00:00:00</span>
               </div>
             </div>
           </div>
@@ -566,15 +671,15 @@
           <div class="mode-specs-grid">
             <div class="spec-item">
               <span class="spec-label">YouTube Package:</span>
-              <span class="spec-value danger">Complete Blackout</span>
+              <span class="spec-value danger">Complete Blackout (Timer 1)</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Package Installer:</span>
-              <span class="spec-value danger">Guarded Against Uninstall</span>
+              <span class="spec-label">Instagram Package:</span>
+              <span class="spec-value danger">Complete Blackout (Timer 2)</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Android Settings:</span>
-              <span class="spec-value danger">Guarded Against Revocation</span>
+              <span class="spec-label">Anti-Impulse Lock:</span>
+              <span class="spec-value security">Toggles Frozen Mid-Session</span>
             </div>
             <div class="spec-item">
               <span class="spec-label">Admin Privileges:</span>
@@ -586,6 +691,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- ========================================================================= -->
   <!-- 4. ANTI-TAMPER & SECURITY BENTO GRID                                      -->
@@ -621,15 +727,15 @@
                 <div class="clock-value monotonic-ticker" id="monotonicTicker">
                   148,924,820 ms
                 </div>
-                <span class="chip chip-verified">LOCK INTACT</span>
+                <span class="chip chip-verified">DUAL TIMERS INTACT</span>
               </div>
             </div>
           </div>
           <div class="bento-copy">
-            <div class="cell-eyebrow">MONOTONIC_CLOCK // ANTI-CHEAT</div>
+            <div class="cell-eyebrow">MONOTONIC_CLOCK // DUAL_ENGINE</div>
             <h3 class="cell-title">Time-Travel Defense</h3>
             <p class="cell-desc">
-              Conventional blockers read <code class="inline-code">System.currentTimeMillis()</code>. Move the Android system date forward by one day in Settings, and their timers expire in five seconds. GemVault anchors every session to <code class="inline-code">SystemClock.elapsedRealtime()</code>—counting continuous hardware milliseconds since boot, including deep sleep. Changing the wall clock or timezone has zero effect on an active lock.
+              Conventional blockers read <code class="inline-code">System.currentTimeMillis()</code>. Moving the system date forward in Settings causes their timers to expire instantly. GemVault anchors both <code class="inline-code">yt_timer_end_elapsed</code> and <code class="inline-code">ig_timer_end_elapsed</code> to <code class="inline-code">SystemClock.elapsedRealtime()</code>—counting continuous hardware milliseconds since boot, including deep sleep. Timezone and clock manipulation have zero impact on active locks.
             </p>
           </div>
         </div>
@@ -638,9 +744,9 @@
         <div class="bento-cell cell-2">
           <div class="bento-visual code-visual">
             <pre class="code-snippet"><code><span class="k-keyword">try</span> {
-    inspectShortsShelf(node)
+    inspectShortsOrReels(node)
 } <span class="k-keyword">finally</span> {
-    node.<span class="k-call">recycle</span>() <span class="k-comment">// Ephemeral memory footprint</span>
+    node.<span class="k-call">recycle</span>() <span class="k-comment">// Ephemeral RAM guarantee</span>
 }</code></pre>
             <div class="heap-badge">
               <span class="badge-dot"></span> 0.0 MB Heap Leak Delta
@@ -650,7 +756,7 @@
             <div class="cell-eyebrow">HEAP_HYGIENE // PERFORMANCE</div>
             <h3 class="cell-title">Deterministic Node Recycling</h3>
             <p class="cell-desc">
-              Poorly engineered accessibility loops degrade Android performance by abandoning detached view snapshots in RAM. GemVault wraps every window traversal in a strict <code class="inline-code">finally</code> block that explicitly calls <code class="inline-code">.recycle()</code> on every traversed <code class="inline-code">AccessibilityNodeInfo</code> instance—guaranteeing zero memory leaks and flat battery consumption.
+              Poorly engineered accessibility loops degrade Android performance by abandoning detached view snapshots in RAM. GemVault wraps every window traversal in a strict <code class="inline-code">finally</code> block that explicitly calls <code class="inline-code">.recycle()</code> on every traversed node—guaranteeing zero memory leaks and flat battery consumption across both YouTube and Instagram monitoring.
             </p>
           </div>
         </div>
@@ -666,12 +772,12 @@
               <div class="pipe-connector">→</div>
               <div class="pipe-node active">
                 <span class="pipe-icon">✓</span>
-                <span class="pipe-text">DELTA_VERIFIED</span>
+                <span class="pipe-text">DUAL_DELTA_SYNC</span>
               </div>
               <div class="pipe-connector">→</div>
               <div class="pipe-node active">
                 <span class="pipe-icon">🔒</span>
-                <span class="pipe-text">TIMER_RESUMED</span>
+                <span class="pipe-text">TIMERS_RESUMED</span>
               </div>
             </div>
           </div>
@@ -679,7 +785,7 @@
             <div class="cell-eyebrow">BOOT_SYNC // PERSISTENCE</div>
             <h3 class="cell-title">Reboot-Safe Math</h3>
             <p class="cell-desc">
-              Because <code class="inline-code">elapsedRealtime()</code> resets to zero upon restart, naive monotonic timers suffer from premature resets across reboots. GemVault cross-references persisted boot timestamps against known elapsed deltas on startup.
+              Because <code class="inline-code">elapsedRealtime()</code> resets to zero upon restart, naive monotonic timers suffer from premature resets. GemVault cross-references persisted boot timestamps against known elapsed deltas on startup for both Timer 1 and Timer 2, resuming sessions seamlessly.
             </p>
           </div>
         </div>
@@ -704,32 +810,32 @@
           </div>
         </div>
 
-        <!-- Cell 5: Zero-Blind-Spot Permission Gating (Full Span) -->
+        <!-- Cell 5: Anti-Impulse Session Locking & Permission Gating (Full Span) -->
         <div class="bento-cell cell-5">
           <div class="bento-visual gating-visual">
             <div class="gating-check-grid">
               <div class="gating-check-item passed">
                 <span class="check-icon">✓</span>
                 <span class="check-label">Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES</span>
-                <span class="check-status">BINDED & ACTIVE</span>
+                <span class="check-status">BINDED &amp; ACTIVE</span>
               </div>
               <div class="gating-check-item passed">
-                <span class="check-icon">✓</span>
-                <span class="check-label">DevicePolicyManager.isAdminActive()</span>
-                <span class="check-status">VERIFIED (STRICT)</span>
+                <span class="check-icon">🔒</span>
+                <span class="check-label">Anti-Impulse Session Lock</span>
+                <span class="check-status">TOGGLES FROZEN MID-SESSION</span>
               </div>
               <div class="gating-check-item ready">
-                <span class="check-icon">🔒</span>
-                <span class="check-label">Hardware Monotonic State Machine</span>
-                <span class="check-status">LOCK AUTHORIZED</span>
+                <span class="check-icon">✓</span>
+                <span class="check-label">Dual Monotonic Clocks (YT &amp; IG)</span>
+                <span class="check-status">INDEPENDENT CHANNELS</span>
               </div>
             </div>
           </div>
           <div class="bento-copy">
             <div class="cell-eyebrow">PREFLIGHT // INTEGRITY_GATES</div>
-            <h3 class="cell-title">Zero-Blind-Spot Permission Gating</h3>
+            <h3 class="cell-title">Anti-Impulse Session Locking &amp; Permission Gates</h3>
             <p class="cell-desc">
-              <code class="inline-code">MainActivity.kt</code> verifies system accessibility hooks before allowing any timer to engage. If a user enters battery-saver mode or revokes the service, the app refuses to initiate a blind lock state.
+              <code class="inline-code">MainActivity.kt</code> verifies system accessibility hooks before allowing any countdown to initiate. Furthermore, the instant an enforcement timer begins, its respective Strict Mode toggle freezes—preventing impulsive rule changes or premature cancellations mid-session until the clock reaches zero.
             </p>
           </div>
         </div>
@@ -747,7 +853,7 @@
         <span class="section-tag">04 // CORE_ARCHITECTURE</span>
         <h2 class="section-title">Separation of Concerns: Gating vs. Interception.</h2>
         <p class="section-subtitle">
-          How GemVault orchestrates foreground configuration with background event dispatching in zero-latency Kotlin.
+          How GemVault orchestrates foreground configuration with background event dispatching in zero-latency Kotlin across YouTube and Instagram.
         </p>
       </div>
 
@@ -766,21 +872,21 @@
               </svg>
               <span>MainActivity.kt</span>
             </div>
-            <span class="arch-role-badge">STATE & PRIVILEGE GATING</span>
+            <span class="arch-role-badge">STATE &amp; PRIVILEGE GATING</span>
           </div>
           <div class="arch-card-body">
             <ul class="arch-points">
               <li>
-                <strong>Pre-Flight Service Audit:</strong> Queries <code class="inline-code">Settings.Secure</code> to verify active accessibility bindings before committing lock timers.
+                <strong>3-Tier Navigation Coordinator:</strong> Manages Dashboard (Main Hub with live status badges), YouTube Settings (Timer 1), and Instagram Settings (Timer 2) with back-stack integrity.
               </li>
               <li>
-                <strong>Monotonic State Persistence:</strong> Stores hardware timestamps and remaining durations in encrypted SharedPreferences.
+                <strong>Dual Monotonic State Persistence:</strong> Stores independent hardware timestamps (<code class="inline-code">yt_timer_end_elapsed</code> &amp; <code class="inline-code">ig_timer_end_elapsed</code>) in encrypted SharedPreferences.
               </li>
               <li>
-                <strong>DevicePolicyManager Coordinator:</strong> Initiates <code class="inline-code">ACTION_ADD_DEVICE_ADMIN</code> for Strict Mode and schedules automated teardown.
+                <strong>Anti-Impulse Rule Locking:</strong> Freezes the respective Strict Mode toggle the instant a timer starts, preventing impulsive edits mid-session.
               </li>
               <li>
-                <strong>Zero Residual Footprint:</strong> Completely ceases background operations once countdown expires.
+                <strong>DevicePolicyManager Coordinator:</strong> Initiates <code class="inline-code">ACTION_ADD_DEVICE_ADMIN</code> for Strict Mode and schedules automated teardown upon session expiry.
               </li>
             </ul>
           </div>
@@ -798,18 +904,18 @@
               </svg>
               <span>ShortsBlockerService.kt</span>
             </div>
-            <span class="arch-role-badge active-interceptor">BACKGROUND EVENT INTERCEPTOR</span>
+            <span class="arch-role-badge active-interceptor">UNIFIED ACCESSIBILITY WORKER</span>
           </div>
           <div class="arch-card-body">
             <ul class="arch-points">
               <li>
-                <strong>Event-Driven Triggers:</strong> Subscribes exclusively to <code class="inline-code">TYPE_WINDOW_STATE_CHANGED</code> & <code class="inline-code">TYPE_VIEW_CLICKED</code>. Zero active polling.
+                <strong>Unified Event Filter:</strong> Monitors window changes strictly for <code class="inline-code">com.google.android.youtube</code> and <code class="inline-code">com.instagram.android</code>. Drops all other apps instantly to protect battery.
               </li>
               <li>
-                <strong>Recursive Node Inspection:</strong> Inspects view IDs for <code class="inline-code">reel_recycler</code>, <code class="inline-code">shorts_container</code>, and bottom navigation indices.
+                <strong>Dual Gatekeeping Checks:</strong> YouTube events check only Timer 1; Instagram events check only Timer 2. If a timer is inactive, the app runs with zero restrictions.
               </li>
               <li>
-                <strong>Millisecond Back Action:</strong> Immediately invokes <code class="inline-code">performGlobalAction(GLOBAL_ACTION_BACK)</code> upon Short detection.
+                <strong>Calibrated Debounce Navigation:</strong> Uses <code class="inline-code">performBackWithDebounce</code> to eject from Reels feeds without exiting active DM threads or search queries.
               </li>
               <li>
                 <strong>Deterministic Disposal:</strong> Explicitly calls <code class="inline-code">node.recycle()</code> inside every traversal branch to ensure 0.0 MB memory leaks.
@@ -826,7 +932,7 @@
           <div class="step-num">01</div>
           <div class="step-content">
             <div class="step-title">User Interaction</div>
-            <div class="step-sub">Tap on YouTube Short / Reel Shelf</div>
+            <div class="step-sub">Tap YouTube Short or Instagram Reel</div>
           </div>
         </div>
         <div class="flow-arrow">→</div>
@@ -841,16 +947,16 @@
         <div class="flow-step highlight">
           <div class="step-num">03</div>
           <div class="step-content">
-            <div class="step-title">ShortsBlockerService.kt</div>
-            <div class="step-sub">Inspects AccessibilityNodeInfo (3ms)</div>
+            <div class="step-title">Dual Gatekeeper Check</div>
+            <div class="step-sub">Evaluates Package &amp; Active Timer (YT vs IG)</div>
           </div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step success">
           <div class="step-num">04</div>
           <div class="step-content">
-            <div class="step-title">GLOBAL_ACTION_BACK</div>
-            <div class="step-sub">Session Ejected & Node Recycled</div>
+            <div class="step-title">Debounced Interception</div>
+            <div class="step-sub">Back/Home Action &amp; Node Recycled (3ms)</div>
           </div>
         </div>
       </div>
@@ -886,8 +992,8 @@
             <tbody>
               <tr>
                 <td><code class="code-pill">BIND_ACCESSIBILITY_SERVICE</code></td>
-                <td>Real-Time View Tree Inspection</td>
-                <td>Inspects <code class="inline-code">AccessibilityNodeInfo</code> view IDs and tabs in YouTube to detect Shorts and fire <code class="inline-code">GLOBAL_ACTION_BACK</code>.</td>
+                <td>Real-Time View Tree Inspection (YT &amp; IG)</td>
+                <td>Inspects <code class="inline-code">AccessibilityNodeInfo</code> view IDs and tabs in YouTube and Instagram to detect short-form feeds and fire back actions.</td>
                 <td><span class="tag-badge green">Ephemeral RAM Only (.recycle())</span></td>
               </tr>
               <tr>
@@ -898,8 +1004,8 @@
               </tr>
               <tr>
                 <td><code class="code-pill">RECEIVE_BOOT_COMPLETED</code></td>
-                <td>Reboot Timer Reconciliation</td>
-                <td>Reconciles active Strict Mode timers and recalculates <code class="inline-code">SystemClock.elapsedRealtime()</code> boot offsets after restart.</td>
+                <td>Dual-Engine Reboot Reconciliation</td>
+                <td>Reconciles active timers (<code class="inline-code">yt_timer_end_elapsed</code> &amp; <code class="inline-code">ig_timer_end_elapsed</code>) and recalculates hardware offsets after reboot.</td>
                 <td><span class="tag-badge green">Minimal Timestamp Math</span></td>
               </tr>
               <tr class="airgap-row">
@@ -956,19 +1062,43 @@
           </button>
           <div class="faq-answer">
             <p>
-              No. GemVault does not run background polling loops or wake locks. It subscribes strictly to <code class="inline-code">TYPE_WINDOW_STATE_CHANGED</code> and <code class="inline-code">TYPE_VIEW_CLICKED</code> within YouTube's package. Furthermore, every traversed view node is immediately released via <code class="inline-code">.recycle()</code>, resulting in flat battery consumption and 0% CPU usage while idle.
+              No. GemVault does not run background polling loops or wake locks. It subscribes strictly to <code class="inline-code">TYPE_WINDOW_STATE_CHANGED</code> and <code class="inline-code">TYPE_VIEW_CLICKED</code> within YouTube (<code class="inline-code">com.google.android.youtube</code>) and Instagram (<code class="inline-code">com.instagram.android</code>). All other apps are dropped instantly with zero processing overhead. Furthermore, every traversed view node is immediately released via <code class="inline-code">.recycle()</code>, resulting in flat battery consumption and 0% CPU usage while idle.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>Why not just delete the YouTube app completely?</span>
+            <span>Can I run independent timers on YouTube and Instagram at the same time?</span>
             <span class="faq-chevron">↓</span>
           </button>
           <div class="faq-answer">
             <p>
-              Engineers, researchers, and students rely heavily on YouTube for technical lectures, conference talks, and software tutorials. Deleting the app eliminates a valuable tool. GemVault surgically cuts out the algorithmic slot machine (Shorts) while keeping long-form educational lectures 100% accessible.
+              Yes! GemVault's dual-engine architecture maintains two separate hardware clock monotonic anchors (<code class="inline-code">yt_timer_end_elapsed</code> and <code class="inline-code">ig_timer_end_elapsed</code>). You can configure a 45-minute YouTube block and a 2-hour Instagram block simultaneously—both count down side by side in the background without resetting or interfering with each other.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does Instagram Reels blocking work without kicking me out of my Direct Messages?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              GemVault uses calibrated <code class="inline-code">performBackWithDebounce</code> navigation logic. When an event fires from Instagram, the service inspects view nodes for Reels viewpagers or bottom tabs. If detected, it dispatches an instant debounced back gesture that returns you safely to your prior view without exiting active DM threads or search feeds.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why not just delete the YouTube and Instagram apps completely?</span>
+            <span class="faq-chevron">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Engineers, researchers, and creators rely heavily on YouTube for technical lectures and conference talks, and use Instagram for direct client messaging and personal communication. Deleting these apps cuts off genuine utility. GemVault surgically cuts out the algorithmic slot machine (Shorts and Reels) while keeping long-form educational videos, DMs, user profiles, and feed photos 100% accessible.
             </p>
           </div>
         </div>
@@ -980,19 +1110,19 @@
           </button>
           <div class="faq-answer">
             <p>
-              In <strong>Standard Mode</strong>, nothing—it functions as a mindful friction filter. In <strong>Strict Mode</strong>, GemVault monitors window state changes for <code class="inline-code">com.android.settings</code> and immediately fires <code class="inline-code">GLOBAL_ACTION_HOME</code> whenever the user attempts to enter the accessibility revocation screen, keeping the lock inviolable until the timer naturally completes.
+              In <strong>Standard Mode</strong>, nothing—it functions as a mindful friction filter. In <strong>Strict Mode</strong>, GemVault monitors window state changes for <code class="inline-code">com.android.settings</code> and immediately fires <code class="inline-code">GLOBAL_ACTION_HOME</code> whenever the user attempts to enter the accessibility revocation screen, keeping the lock inviolable until the timer naturally completes. Additionally, Strict Mode toggles lock mid-session to prevent impulsive rule changes.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>What happens if my phone dies or is rebooted during a Strict Mode lock?</span>
+            <span>What happens if my phone dies or is rebooted during a session?</span>
             <span class="faq-chevron">↓</span>
           </button>
           <div class="faq-answer">
             <p>
-              GemVault uses boot-safe mathematical reconciliation. While <code class="inline-code">SystemClock.elapsedRealtime()</code> resets to zero on hardware reboot, GemVault listens for <code class="inline-code">RECEIVE_BOOT_COMPLETED</code>, cross-references persisted boot offsets, and resumes the exact remaining countdown without prematurely unlocking or causing multi-day lockouts.
+              GemVault uses boot-safe mathematical reconciliation. While <code class="inline-code">SystemClock.elapsedRealtime()</code> resets to zero on hardware reboot, GemVault listens for <code class="inline-code">RECEIVE_BOOT_COMPLETED</code>, cross-references persisted boot offsets for both Timer 1 and Timer 2, and resumes the exact remaining countdown without prematurely unlocking or causing multi-day lockouts.
             </p>
           </div>
         </div>
@@ -1025,13 +1155,13 @@
       </p>
 
       <div class="conversion-actions">
-        <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.0/app-release.apk" class="btn btn-primary btn-xl">
+        <a href="https://github.com/KarthikPabbisetti/GemVault/releases/download/v1.4.1/app-release.apk" class="btn btn-primary btn-xl">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          <span>Download GemVault v1.4 APK</span>
+          <span>Download GemVault v2.0.0 APK</span>
         </a>
 
         <!-- One-Click Git Clone Snippet -->
